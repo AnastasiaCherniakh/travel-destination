@@ -1,0 +1,135 @@
+:root {
+    --crimson-red: #B03A2E;
+    --soft-gold: #CDAA7D;
+    --sakura-pink: #EFB5C4;
+    --bamboo-green: #7BAF9E;
+    --charcoal-gray: #333333;
+    --soft-white: #FAF9F6;
+    --headline-font: "Cinzel", serif;
+    --subheadline-font: "Lora", serif;
+    --additional-font: "Roboto", sans-serif;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: var(--subheadline-font);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--soft-gold);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav a:hover {
+    color: var(--crimson-red);
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section {
+    position: relative;
+    background-image: url("/images/Fushimi\ Inari\ Shrine2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: var(--headline-font);
+    color: var(--crimson-red);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 2rem;
+    font-family: var(--subheadline-font);
+    color: var(--soft-gold);
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content a {
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    background-color: var(--crimson-red);
+    color: var(--soft-white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    font-family: var(--subheadline-font);
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.hero-content a:hover {
+    background-color: var(--sakura-pink);
+    color: var(--crimson-red);
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
